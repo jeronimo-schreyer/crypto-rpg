@@ -1,0 +1,33 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://GUI/Shop/ShopGUI.gd" type="Script" id=1]
+
+[node name="ShopGUI" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+mouse_filter = 2
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="."]
+anchor_left = 0.5
+anchor_right = 0.5
+margin_left = -337.0
+margin_top = 56.0
+margin_right = 337.0
+margin_bottom = 187.0
+text = "Welcome to the shop"
+align = 1
+valign = 1
+
+[node name="Button" type="Button" parent="."]
+margin_left = 692.0
+margin_top = 178.0
+margin_right = 835.0
+margin_bottom = 242.0
+text = "Comprar"
+__meta__ = {
+"_edit_use_anchors_": false
+}
