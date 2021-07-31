@@ -18,8 +18,9 @@ func _ready():
 
 func move_to(position):
 	path_index = 0
-	path_to_target = Global.get_floor_path(transform.origin, position)
-	$States.switch_state("Moving")
+	path_to_target = Global.get_floor_path(transform.origin, position, true)
+	if path_to_target.size() > 0:
+		$States.switch_state("Moving")
 
 func set_target(character):
 	target = character

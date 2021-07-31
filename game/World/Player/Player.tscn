@@ -43,6 +43,7 @@ script = ExtResource( 4 )
 script = ExtResource( 3 )
 
 [node name="Timer" type="Timer" parent="States/Attack"]
+wait_time = 0.5
 
 [node name="Moving" type="Node" parent="States"]
 script = ExtResource( 5 )
