@@ -12,7 +12,7 @@ _global_script_classes=[ {
 "base": "CollisionObject",
 "class": "Character",
 "language": "GDScript",
-"path": "res://core/Character.gd"
+"path": "res://Core/Character.gd"
 }, {
 "base": "CollisionObject",
 "class": "Enemy",
@@ -37,12 +37,12 @@ _global_script_classes=[ {
 "base": "Node",
 "class": "State",
 "language": "GDScript",
-"path": "res://core/State.gd"
+"path": "res://Core/State.gd"
 }, {
 "base": "Node",
 "class": "StateMachine",
 "language": "GDScript",
-"path": "res://core/StateMachine.gd"
+"path": "res://Core/StateMachine.gd"
 } ]
 _global_script_class_icons={
 "Character": "",
@@ -62,10 +62,18 @@ config/icon="res://icon.png"
 
 [autoload]
 
-Events="*res://core/Events.gd"
-Global="*res://core/Global.gd"
+Events="*res://Core/Events.gd"
+Global="*res://Core/Global.gd"
+
+[display]
+
+window/size/height=768
+window/size/resizable=false
 
 [rendering]
 
+threads/thread_model=2
+quality/filters/msaa=1
 quality/filters/use_fxaa=true
+quality/filters/use_debanding=true
 environment/default_environment="res://default_env.tres"

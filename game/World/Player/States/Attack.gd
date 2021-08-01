@@ -1,4 +1,4 @@
-extends "res://core/State.gd"
+extends "res://Core/State.gd"
 
 var is_active : bool
 

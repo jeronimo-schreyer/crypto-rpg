@@ -1,19 +1,19 @@
 [gd_scene load_steps=10 format=2]
 
 [ext_resource path="res://World/Player/Player.gd" type="Script" id=1]
-[ext_resource path="res://core/StateMachine.gd" type="Script" id=2]
+[ext_resource path="res://Core/StateMachine.gd" type="Script" id=2]
 [ext_resource path="res://World/Player/States/Attack.gd" type="Script" id=3]
 [ext_resource path="res://World/Player/States/Idle.gd" type="Script" id=4]
 [ext_resource path="res://World/Player/States/Moving.gd" type="Script" id=5]
 [ext_resource path="res://World/Player/States/Talking.gd" type="Script" id=6]
 [ext_resource path="res://3D/Characters/Player/Player.tscn" type="PackedScene" id=7]
 
-[sub_resource type="CylinderShape" id=4]
+[sub_resource type="CylinderShape" id=1]
 radius = 1.2
 height = 3.0
 
-[sub_resource type="BoxShape" id=5]
-extents = Vector3( 2, 2, 2 )
+[sub_resource type="BoxShape" id=2]
+extents = Vector3( 3, 2, 3 )
 
 [node name="Player" type="KinematicBody"]
 script = ExtResource( 1 )
@@ -24,14 +24,14 @@ transform = Transform( -2, 0, -3.01992e-07, 0, 2, 0, 3.01992e-07, 0, -2, 0, 0, 0
 
 [node name="CollisionShape" type="CollisionShape" parent="."]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.326, 1.5, -0.281 )
-shape = SubResource( 4 )
+shape = SubResource( 1 )
 
 [node name="Area" type="Area" parent="."]
 input_ray_pickable = false
 
 [node name="CollisionShape" type="CollisionShape" parent="Area"]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.316, 2, -0.275 )
-shape = SubResource( 5 )
+shape = SubResource( 2 )
 
 [node name="States" type="Node" parent="."]
 script = ExtResource( 2 )

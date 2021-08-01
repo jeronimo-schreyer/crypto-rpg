@@ -1,4 +1,4 @@
-extends "res://core/State.gd"
+extends "res://Core/State.gd"
 
 var path_to_target : PoolVector3Array
 var path_index : int

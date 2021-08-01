@@ -1,4 +1,4 @@
-extends "res://core/Character.gd"
+extends "res://Core/Character.gd"
 class_name Enemy
 
 export (Curve3D) var patrol_circuit

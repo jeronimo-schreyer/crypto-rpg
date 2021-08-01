@@ -1,7 +1,7 @@
 [gd_scene load_steps=11 format=2]
 
 [ext_resource path="res://World/Enemy/Enemy.gd" type="Script" id=1]
-[ext_resource path="res://core/StateMachine.gd" type="Script" id=2]
+[ext_resource path="res://Core/StateMachine.gd" type="Script" id=2]
 [ext_resource path="res://World/Enemy/States/Follow.gd" type="Script" id=3]
 [ext_resource path="res://World/Enemy/States/Patrol.gd" type="Script" id=4]
 [ext_resource path="res://World/Enemy/States/Idle.gd" type="Script" id=5]

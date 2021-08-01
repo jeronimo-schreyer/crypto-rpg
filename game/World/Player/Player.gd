@@ -3,7 +3,7 @@ class_name Player
 
 export (float) var speed
 
-var target : Character
+var target
 var path_to_target : PoolVector3Array
 var path_index : int
 

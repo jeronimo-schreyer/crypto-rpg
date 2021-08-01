@@ -23,10 +23,10 @@ func _input(event):
 	if event is InputEventMouseButton and event.is_pressed():
 		var processed_speed = $Camera.global_transform.basis.z * speed
 		match event.button_index:
-			BUTTON_WHEEL_UP:
+			BUTTON_WHEEL_DOWN:
 				if global_transform.origin.distance_to($Camera.global_transform.origin) < max_zoom:
 					$Camera.global_transform.origin += processed_speed
-			BUTTON_WHEEL_DOWN:
+			BUTTON_WHEEL_UP:
 				if global_transform.origin.distance_to($Camera.global_transform.origin) > min_zoom:
 					$Camera.global_transform.origin -= processed_speed
 	

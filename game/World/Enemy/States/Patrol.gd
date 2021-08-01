@@ -1,4 +1,4 @@
-extends "res://core/State.gd"
+extends "res://Core/State.gd"
 
 var patrol_points : PoolVector3Array
 var patrol_index : int

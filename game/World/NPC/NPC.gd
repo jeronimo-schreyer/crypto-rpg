@@ -1,4 +1,4 @@
-extends "res://core/Character.gd"
+extends "res://Core/Character.gd"
 class_name NPC
 
 # are you?
