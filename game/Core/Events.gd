@@ -11,6 +11,9 @@ signal hit(enemy, damage)
 # warning-ignore: unused_signal
 signal target_character(character)
 
+# warning-ignore: unused_signal
+signal player_stat(stat, value)
+
 
 ## UI Elements
 
