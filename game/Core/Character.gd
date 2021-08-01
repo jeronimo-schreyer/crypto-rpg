@@ -20,7 +20,7 @@ func _on_input_event(_camera, event, _click_position, _click_normal, _shape_idx)
 				Events.emit_signal("move", global_transform.origin)
 
 func _on_mouse_entered():
-	Events.emit_signal("character_info", self)
+	Events.emit_signal("info", "Ese es %s" % name)
 
 func _on_mouse_exited():
-	Events.emit_signal("character_info", null)
+	Events.emit_signal("info", "")

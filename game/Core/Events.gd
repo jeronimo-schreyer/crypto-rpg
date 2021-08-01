@@ -10,8 +10,12 @@ signal hit(enemy, damage)
 
 # warning-ignore: unused_signal
 signal target_character(character)
+
+
+## UI Elements
+
 # warning-ignore: unused_signal
-signal character_info(enemy, damage)
+signal info(enemy, damage)
 
 # warning-ignore: unused_signal
 signal open_shop(npc)

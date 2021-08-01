@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/panel_bg.png-1d6ceebe3bde6403a197a60ca91c489c.stex"
+path="res://.import/panel_bg.png-986f8ad1bc53864741c6455453f52df5.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://GUI/BottomHud/panel_bg.png"
-dest_files=[ "res://.import/panel_bg.png-1d6ceebe3bde6403a197a60ca91c489c.stex" ]
+source_file="res://UI/BottomHud/panel_bg.png"
+dest_files=[ "res://.import/panel_bg.png-986f8ad1bc53864741c6455453f52df5.stex" ]
 
 [params]
 

@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/hm_base.png-31f83111f500b76ae2f02a1ba96050e8.stex"
+path="res://.import/button_frame.png-9de400e3e015b5268f2c9de4b1067cb4.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://GUI/BottomHud/hm_base.png"
-dest_files=[ "res://.import/hm_base.png-31f83111f500b76ae2f02a1ba96050e8.stex" ]
+source_file="res://UI/BottomHud/button_frame.png"
+dest_files=[ "res://.import/button_frame.png-9de400e3e015b5268f2c9de4b1067cb4.stex" ]
 
 [params]
 

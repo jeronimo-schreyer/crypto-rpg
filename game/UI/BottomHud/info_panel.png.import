@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/health_icon.png-e920db560875e441ea6c8d0a1e14246b.stex"
+path="res://.import/info_panel.png-e7127f9c25ada10d988c318f098e7401.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://GUI/BottomHud/health_icon.png"
-dest_files=[ "res://.import/health_icon.png-e920db560875e441ea6c8d0a1e14246b.stex" ]
+source_file="res://UI/BottomHud/info_panel.png"
+dest_files=[ "res://.import/info_panel.png-e7127f9c25ada10d988c318f098e7401.stex" ]
 
 [params]
 

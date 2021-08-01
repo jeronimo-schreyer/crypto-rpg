@@ -1,19 +1,15 @@
-[gd_scene load_steps=25 format=2]
+[gd_scene load_steps=18 format=2]
 
-[ext_resource path="res://UI/Potions/16.png" type="Texture" id=1]
-[ext_resource path="res://GUI/BottomHud/health_icon.png" type="Texture" id=2]
-[ext_resource path="res://GUI/BottomHud/button_face.png" type="Texture" id=3]
-[ext_resource path="res://GUI/BottomHud/potion_slot.png" type="Texture" id=4]
-[ext_resource path="res://GUI/BottomHud/info_panel.png" type="Texture" id=5]
-[ext_resource path="res://GUI/BottomHud/m_fill.png" type="Texture" id=6]
-[ext_resource path="res://UI/Potions/26.PNG" type="Texture" id=7]
-[ext_resource path="res://GUI/BottomHud/magic_icon.png" type="Texture" id=8]
-[ext_resource path="res://GUI/BottomHud/hm_base.png" type="Texture" id=9]
-[ext_resource path="res://UI/Potions/25.png" type="Texture" id=10]
-[ext_resource path="res://GUI/BottomHud/hm_container.png" type="Texture" id=11]
-[ext_resource path="res://GUI/BottomHud/h_fill.png" type="Texture" id=12]
-[ext_resource path="res://GUI/BottomHud/panel_bg.png" type="Texture" id=13]
-[ext_resource path="res://UI/Potions/5.png" type="Texture" id=14]
+[ext_resource path="res://GUI/BottomHud/PotionSlot.tscn" type="PackedScene" id=1]
+[ext_resource path="res://UI/BottomHud/health_icon.png" type="Texture" id=2]
+[ext_resource path="res://GUI/BottomHud/MenuButton.tscn" type="PackedScene" id=4]
+[ext_resource path="res://UI/BottomHud/info_panel.png" type="Texture" id=5]
+[ext_resource path="res://UI/BottomHud/m_fill.png" type="Texture" id=6]
+[ext_resource path="res://UI/BottomHud/magic_icon.png" type="Texture" id=8]
+[ext_resource path="res://UI/BottomHud/hm_base.png" type="Texture" id=9]
+[ext_resource path="res://UI/BottomHud/hm_container.png" type="Texture" id=11]
+[ext_resource path="res://UI/BottomHud/h_fill.png" type="Texture" id=12]
+[ext_resource path="res://UI/BottomHud/panel_bg.png" type="Texture" id=13]
 [ext_resource path="res://Fonts/RobotoSlab-Regular.ttf" type="DynamicFontData" id=15]
 [ext_resource path="res://Fonts/RobotoSlab-SemiBold.ttf" type="DynamicFontData" id=16]
 [ext_resource path="res://GUI/BottomHud/BottomHUD.gd" type="Script" id=17]
@@ -26,20 +22,6 @@ margin_right = 15.4587
 margin_top = 11.1779
 margin_bottom = 12.6048
 
-[sub_resource type="StyleBoxTexture" id=2]
-texture = ExtResource( 3 )
-region_rect = Rect2( 0, 0, 576, 99 )
-
-[sub_resource type="StyleBoxTexture" id=3]
-texture = ExtResource( 3 )
-region_rect = Rect2( 0, 0, 576, 99 )
-modulate_color = Color( 0.8, 0.8, 0.8, 1 )
-
-[sub_resource type="StyleBoxTexture" id=4]
-texture = ExtResource( 3 )
-region_rect = Rect2( 0, 0, 576, 99 )
-modulate_color = Color( 0.9, 0.9, 0.9, 1 )
-
 [sub_resource type="DynamicFont" id=5]
 size = 18
 outline_size = 1
@@ -47,13 +29,13 @@ outline_color = Color( 0, 0, 0, 1 )
 use_filter = true
 font_data = ExtResource( 16 )
 
-[sub_resource type="StyleBoxTexture" id=6]
+[sub_resource type="StyleBoxTexture" id=8]
 texture = ExtResource( 5 )
-region_rect = Rect2( 0, 0, 1458, 1940 )
-margin_left = 266.0
-margin_right = 267.973
-margin_top = 208.0
-margin_bottom = 210.957
+region_rect = Rect2( 0, 0, 566, 558 )
+margin_left = 77.2696
+margin_right = 70.3
+margin_top = 80.75
+margin_bottom = 80.75
 
 [sub_resource type="DynamicFont" id=7]
 size = 18
@@ -87,235 +69,31 @@ anchor_top = -0.205556
 anchor_right = 0.736328
 anchor_bottom = 0.222222
 margin_right = -2.0
-custom_constants/separation = 4
 __meta__ = {
 "_edit_use_anchors_": true
 }
 
-[node name="1" type="Control" parent="Panel/Potions"]
+[node name="Slot1" parent="Panel/Potions" instance=ExtResource( 1 )]
 margin_right = 76.0
-margin_bottom = 77.0
-rect_min_size = Vector2( 38, 38 )
-size_flags_horizontal = 7
-size_flags_vertical = 7
 
-[node name="TextureRect" type="TextureRect" parent="Panel/Potions/1"]
-anchor_right = 1.0
-anchor_bottom = 1.0
-texture = ExtResource( 4 )
-expand = true
-stretch_mode = 6
-__meta__ = {
-"_edit_use_anchors_": false
-}
-
-[node name="MarginContainer" type="MarginContainer" parent="Panel/Potions/1"]
-anchor_right = 1.0
-anchor_bottom = 1.0
-custom_constants/margin_right = 8
-custom_constants/margin_top = 12
-custom_constants/margin_left = 12
-custom_constants/margin_bottom = 12
-__meta__ = {
-"_edit_use_anchors_": false
-}
-
-[node name="TextureRect" type="TextureRect" parent="Panel/Potions/1/MarginContainer"]
-margin_left = 12.0
-margin_top = 12.0
-margin_right = 68.0
-margin_bottom = 65.0
-texture = ExtResource( 1 )
-expand = true
-stretch_mode = 6
-
-[node name="2" type="Control" parent="Panel/Potions"]
+[node name="Slot2" parent="Panel/Potions" instance=ExtResource( 1 )]
 margin_left = 80.0
 margin_right = 157.0
-margin_bottom = 77.0
-rect_min_size = Vector2( 38, 38 )
-size_flags_horizontal = 7
-size_flags_vertical = 7
 
-[node name="TextureRect" type="TextureRect" parent="Panel/Potions/2"]
-anchor_right = 1.0
-anchor_bottom = 1.0
-texture = ExtResource( 4 )
-expand = true
-stretch_mode = 6
-__meta__ = {
-"_edit_use_anchors_": false
-}
-
-[node name="MarginContainer" type="MarginContainer" parent="Panel/Potions/2"]
-anchor_right = 1.0
-anchor_bottom = 1.0
-custom_constants/margin_right = 8
-custom_constants/margin_top = 12
-custom_constants/margin_left = 12
-custom_constants/margin_bottom = 12
-__meta__ = {
-"_edit_use_anchors_": false
-}
-
-[node name="TextureRect" type="TextureRect" parent="Panel/Potions/2/MarginContainer"]
-margin_left = 12.0
-margin_top = 12.0
-margin_right = 69.0
-margin_bottom = 65.0
-texture = ExtResource( 10 )
-expand = true
-stretch_mode = 6
-
-[node name="3" type="Control" parent="Panel/Potions"]
+[node name="Slot3" parent="Panel/Potions" instance=ExtResource( 1 )]
 margin_left = 161.0
 margin_right = 237.0
-margin_bottom = 77.0
-rect_min_size = Vector2( 38, 38 )
-size_flags_horizontal = 7
-size_flags_vertical = 7
 
-[node name="TextureRect" type="TextureRect" parent="Panel/Potions/3"]
-anchor_right = 1.0
-anchor_bottom = 1.0
-texture = ExtResource( 4 )
-expand = true
-stretch_mode = 6
-__meta__ = {
-"_edit_use_anchors_": false
-}
-
-[node name="MarginContainer3" type="MarginContainer" parent="Panel/Potions/3"]
-anchor_right = 1.0
-anchor_bottom = 1.0
-custom_constants/margin_right = 8
-custom_constants/margin_top = 12
-custom_constants/margin_left = 12
-custom_constants/margin_bottom = 12
-__meta__ = {
-"_edit_use_anchors_": false
-}
-
-[node name="TextureRect" type="TextureRect" parent="Panel/Potions/3/MarginContainer3"]
-margin_left = 12.0
-margin_top = 12.0
-margin_right = 68.0
-margin_bottom = 65.0
-texture = ExtResource( 7 )
-expand = true
-stretch_mode = 6
-
-[node name="4" type="Control" parent="Panel/Potions"]
+[node name="Slot4" parent="Panel/Potions" instance=ExtResource( 1 )]
 margin_left = 241.0
 margin_right = 318.0
-margin_bottom = 77.0
-rect_min_size = Vector2( 38, 38 )
-size_flags_horizontal = 7
-size_flags_vertical = 7
 
-[node name="TextureRect" type="TextureRect" parent="Panel/Potions/4"]
-anchor_right = 1.0
-anchor_bottom = 1.0
-texture = ExtResource( 4 )
-expand = true
-stretch_mode = 6
-__meta__ = {
-"_edit_use_anchors_": false
-}
-
-[node name="MarginContainer2" type="MarginContainer" parent="Panel/Potions/4"]
-anchor_right = 1.0
-anchor_bottom = 1.0
-custom_constants/margin_right = 8
-custom_constants/margin_top = 12
-custom_constants/margin_left = 12
-custom_constants/margin_bottom = 12
-__meta__ = {
-"_edit_use_anchors_": false
-}
-
-[node name="TextureRect" type="TextureRect" parent="Panel/Potions/4/MarginContainer2"]
-margin_left = 12.0
-margin_top = 12.0
-margin_right = 69.0
-margin_bottom = 65.0
-texture = ExtResource( 14 )
-expand = true
-stretch_mode = 6
-
-[node name="5" type="Control" parent="Panel/Potions"]
+[node name="Slot5" parent="Panel/Potions" instance=ExtResource( 1 )]
 margin_left = 322.0
 margin_right = 398.0
-margin_bottom = 77.0
-rect_min_size = Vector2( 38, 38 )
-size_flags_horizontal = 7
-size_flags_vertical = 7
 
-[node name="TextureRect" type="TextureRect" parent="Panel/Potions/5"]
-anchor_right = 1.0
-anchor_bottom = 1.0
-texture = ExtResource( 4 )
-expand = true
-stretch_mode = 6
-__meta__ = {
-"_edit_use_anchors_": false
-}
-
-[node name="MarginContainer2" type="MarginContainer" parent="Panel/Potions/5"]
-anchor_right = 1.0
-anchor_bottom = 1.0
-custom_constants/margin_right = 8
-custom_constants/margin_top = 12
-custom_constants/margin_left = 12
-custom_constants/margin_bottom = 12
-__meta__ = {
-"_edit_use_anchors_": false
-}
-
-[node name="TextureRect" type="TextureRect" parent="Panel/Potions/5/MarginContainer2"]
-margin_left = 12.0
-margin_top = 12.0
-margin_right = 68.0
-margin_bottom = 65.0
-expand = true
-stretch_mode = 6
-
-[node name="6" type="Control" parent="Panel/Potions"]
+[node name="Slot6" parent="Panel/Potions" instance=ExtResource( 1 )]
 margin_left = 402.0
-margin_right = 479.0
-margin_bottom = 77.0
-rect_min_size = Vector2( 38, 38 )
-size_flags_horizontal = 7
-size_flags_vertical = 7
-
-[node name="TextureRect" type="TextureRect" parent="Panel/Potions/6"]
-anchor_right = 1.0
-anchor_bottom = 1.0
-texture = ExtResource( 4 )
-expand = true
-stretch_mode = 6
-__meta__ = {
-"_edit_use_anchors_": false
-}
-
-[node name="MarginContainer2" type="MarginContainer" parent="Panel/Potions/6"]
-anchor_right = 1.0
-anchor_bottom = 1.0
-custom_constants/margin_right = 8
-custom_constants/margin_top = 12
-custom_constants/margin_left = 12
-custom_constants/margin_bottom = 12
-__meta__ = {
-"_edit_use_anchors_": false
-}
-
-[node name="TextureRect" type="TextureRect" parent="Panel/Potions/6/MarginContainer2"]
-margin_left = 12.0
-margin_top = 12.0
-margin_right = 69.0
-margin_bottom = 65.0
-expand = true
-stretch_mode = 6
 
 [node name="Life" type="TextureRect" parent="Panel"]
 anchor_left = 0.008
@@ -421,24 +199,16 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="Character" type="Button" parent="Panel"]
+[node name="Character" parent="Panel" instance=ExtResource( 4 )]
 anchor_top = 0.5
 anchor_bottom = 0.5
 margin_left = 56.0
 margin_top = 17.0
 margin_right = 200.0
 margin_bottom = 71.0
-custom_styles/hover = SubResource( 2 )
-custom_styles/pressed = SubResource( 3 )
-custom_styles/normal = SubResource( 4 )
-custom_fonts/font = SubResource( 5 )
 text = "CHARACTER"
-__meta__ = {
-"_edit_group_": true,
-"_edit_use_anchors_": false
-}
 
-[node name="Map" type="Button" parent="Panel"]
+[node name="Menu" parent="Panel" instance=ExtResource( 4 )]
 anchor_left = 1.0
 anchor_top = 0.5
 anchor_right = 1.0
@@ -447,15 +217,8 @@ margin_left = -192.0
 margin_top = 19.0
 margin_right = -48.0
 margin_bottom = 73.0
-custom_styles/hover = SubResource( 2 )
-custom_styles/pressed = SubResource( 3 )
-custom_styles/normal = SubResource( 4 )
 custom_fonts/font = SubResource( 5 )
-text = "MAP"
-__meta__ = {
-"_edit_group_": true,
-"_edit_use_anchors_": false
-}
+text = "MENU"
 
 [node name="Info" type="Panel" parent="Panel"]
 anchor_top = 0.0333333
@@ -465,7 +228,7 @@ margin_left = 220.0
 margin_top = 47.0
 margin_right = -216.0
 margin_bottom = -13.0
-custom_styles/panel = SubResource( 6 )
+custom_styles/panel = SubResource( 8 )
 __meta__ = {
 "_edit_use_anchors_": true
 }

@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/hm_container.png-57d873922718784bf4e94c59812cbf60.stex"
+path="res://.import/potion_slot.png-4240188f0846f7a9de5d1892c183f8ce.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://GUI/BottomHud/hm_container.png"
-dest_files=[ "res://.import/hm_container.png-57d873922718784bf4e94c59812cbf60.stex" ]
+source_file="res://UI/BottomHud/potion_slot.png"
+dest_files=[ "res://.import/potion_slot.png-4240188f0846f7a9de5d1892c183f8ce.stex" ]
 
 [params]
 
