@@ -30,7 +30,7 @@ data = PoolVector3Array( 50, 0, 50, -50, 0, 50, 50, 0, -50, -50, 0, 50, -50, 0, 
 [sub_resource type="SpatialMaterial" id=7]
 flags_unshaded = true
 flags_use_point_size = true
-albedo_color = Color( 0, 1, 0, 1 )
+albedo_color = Color( 1, 0, 0, 1 )
 
 [node name="Floor" type="Navigation"]
 script = ExtResource( 1 )

@@ -17,7 +17,8 @@ func _ready():
 		enter_state(current_state)
 
 func _process(delta):
-	states[current_state].call_deferred("process", delta)
+	if states[current_state].is_processing():
+		states[current_state].call_deferred("process", delta)
 
 func enter_state(next):
 	current_state = next

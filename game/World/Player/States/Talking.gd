@@ -6,4 +6,4 @@ func _ready():
 	pass # Replace with function body.
 
 func enter():
-	print("Talking::enter")
+	pass

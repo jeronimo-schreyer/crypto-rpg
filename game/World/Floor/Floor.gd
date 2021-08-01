@@ -12,20 +12,21 @@ func _on_input_event(_camera, event, click_position, _click_normal, _shape_idx):
 			Events.emit_signal("target_character", null)
 			Events.emit_signal("move", click_position)
 
-func get_nav_path(origin, destination, show_debug_line = false):
+func get_nav_path(origin, destination):
 	var path = get_simple_path(origin, destination)
 	if path.size() > 1:
 		path.remove(0)
-		
-		if OS.is_debug_build() and show_debug_line and path.size() > 0:
-			$DebugPath.clear()
-			$DebugPath.begin(Mesh.PRIMITIVE_POINTS, null)
-			$DebugPath.add_vertex(path[0])
-			$DebugPath.add_vertex(path[path.size() - 1])
-			$DebugPath.end()
-			$DebugPath.begin(Mesh.PRIMITIVE_LINE_STRIP, null)
-			for x in path:
-				$DebugPath.add_vertex(x)
-			$DebugPath.end()
 	
 	return path
+
+func draw_debug_line(path):
+	if OS.is_debug_build() and path.size() > 0:
+		$DebugPath.clear()
+		$DebugPath.begin(Mesh.PRIMITIVE_POINTS, null)
+		$DebugPath.add_vertex(path[0])
+		$DebugPath.add_vertex(path[path.size() - 1])
+		$DebugPath.end()
+		$DebugPath.begin(Mesh.PRIMITIVE_LINE_STRIP, null)
+		for x in path:
+			$DebugPath.add_vertex(x)
+		$DebugPath.end()

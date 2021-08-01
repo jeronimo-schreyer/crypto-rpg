@@ -1,6 +1,7 @@
 extends "res://core/Character.gd"
 class_name NPC
 
+# are you?
 var talking_to_me = false
 
 # Called when the node enters the scene tree for the first time.

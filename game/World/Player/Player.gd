@@ -15,10 +15,16 @@ func _ready():
 	Events.connect("move", self, "move_to")
 	# warning-ignore: return_value_discarded
 	Events.connect("target_character", self, "set_target")
+	# warning-ignore: return_value_discarded
+	Events.connect("hit", self, "on_hitted")
+
+func on_hitted(character, damage):
+	if character == self:
+		print("Te han golpeado y te han sacado %d puntos de vida" % damage)
 
 func move_to(position):
 	path_index = 0
-	path_to_target = Global.get_floor_path(transform.origin, position, true)
+	path_to_target = Global.get_floor_path(transform.origin, position)
 	if path_to_target.size() > 0:
 		$States.switch_state("Moving")
 
@@ -33,3 +39,9 @@ func _on_body_entered(body):
 			"NPC":
 				$States.switch_state("Talking")
 				Events.emit_signal("talk_to", target)
+
+func _on_body_exited(body):
+	if body == target:
+		match target.get_class():
+			"Enemy":
+				move_to(target.transform.origin)

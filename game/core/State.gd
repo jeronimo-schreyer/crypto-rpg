@@ -2,7 +2,10 @@ extends Node
 class_name State
 
 var fsm
-var character : Player
+var character
+
+func _ready():
+	set_process(true)
 
 func enter():
 	pass
