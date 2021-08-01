@@ -8,12 +8,10 @@ func _ready():
 	pass
 
 func enter():
-	print("Follow::enter")
 	_on_timeout()
 	$Timer.start()
 
 func exit():
-	print("Follow::exit")
 	$Timer.stop()
 
 func process(_delta):

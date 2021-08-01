@@ -6,11 +6,9 @@ func _ready():
 	pass # Replace with function body.
 
 func enter():
-	print("Attack::enter")
 	$Timer.start()
 
 func exit():
-	print("Attack::exit")
 	$Timer.stop()
 
 func process(_delta):
@@ -19,4 +17,4 @@ func process(_delta):
 		switch_state("Follow")
 
 func _on_timeout():
-	Events.emit_signal("hit", Global.player, 50)
+	Events.emit_signal("hit", Global.player, 12)

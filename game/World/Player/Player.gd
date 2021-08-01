@@ -20,9 +20,8 @@ func _ready():
 	# warning-ignore: return_value_discarded
 	Events.connect("hit", self, "on_hitted")
 
-func on_hitted(character, damage):
+func on_hitted(character, _damage):
 	if character == self:
-		print("Te han golpeado y te han sacado %d puntos de vida" % damage)
 		animation.start("Hit")
 
 func move_to(position):

@@ -13,7 +13,6 @@ func _ready():
 func get_class():
 	return "Enemy"
 
-func on_hitted(character, damage):
+func on_hitted(character, _damage):
 	if character == self:
-		print("Has golpeado a %s y le quitaste %d vida" % [name, damage])
 		$States.switch_state("Attack")
