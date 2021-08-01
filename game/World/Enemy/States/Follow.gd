@@ -8,14 +8,16 @@ func _ready():
 	pass
 
 func enter():
+	print("Follow::enter")
 	_on_timeout()
 	$Timer.start()
 
 func exit():
+	print("Follow::exit")
 	$Timer.stop()
 
 func process(_delta):
-	if character.transform.origin.distance_to(Global.player.transform.origin) < 2.1:
+	if character.transform.origin.distance_to(Global.player.transform.origin) <= 2.5:
 		switch_state("Attack")
 	else:
 		if path_to_target.size() > path_index:
@@ -32,6 +34,5 @@ func _on_timeout():
 	if character.global_transform.origin.distance_to(Global.player.transform.origin) < character.max_view_distance:
 		path_index = 0
 		path_to_target = Global.get_floor_path(character.transform.origin, Global.player.transform.origin)
-		Global.draw_floor_debug_line(path_to_target)
 	else:
 		switch_state("Idle")

@@ -7,6 +7,8 @@ var target : Character
 var path_to_target : PoolVector3Array
 var path_index : int
 
+onready var animation : AnimationNodeStateMachinePlayback = $Mesh/AnimationTree.get("parameters/playback")
+
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	Global.player = self
@@ -21,6 +23,7 @@ func _ready():
 func on_hitted(character, damage):
 	if character == self:
 		print("Te han golpeado y te han sacado %d puntos de vida" % damage)
+		animation.start("Hit")
 
 func move_to(position):
 	path_index = 0

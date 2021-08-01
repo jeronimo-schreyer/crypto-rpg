@@ -17,5 +17,6 @@ func exit():
 func _on_timeout():
 	if is_active:
 		Events.emit_signal("hit", character.target, 80)
+		character.animation.start("Attack")
 	else:
 		$Timer.stop()

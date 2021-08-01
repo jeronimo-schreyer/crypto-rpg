@@ -1,0 +1,76 @@
+[gd_scene load_steps=16 format=2]
+
+[ext_resource path="res://3D/Characters/Player/Player.glb" type="PackedScene" id=1]
+[ext_resource path="res://3D/Weapons/Sword/SM_Wep_Sword_01.mesh" type="ArrayMesh" id=2]
+[ext_resource path="res://3D/Weapons/Shield/SM_Wep_Sheild_03.mesh" type="ArrayMesh" id=3]
+
+[sub_resource type="AnimationNodeAnimation" id=1]
+animation = "Attack"
+
+[sub_resource type="AnimationNodeAnimation" id=2]
+animation = "Hit"
+
+[sub_resource type="AnimationNodeAnimation" id=3]
+animation = "Idle"
+
+[sub_resource type="AnimationNodeAnimation" id=4]
+animation = "Walk F"
+
+[sub_resource type="AnimationNodeStateMachineTransition" id=5]
+
+[sub_resource type="AnimationNodeStateMachineTransition" id=6]
+
+[sub_resource type="AnimationNodeStateMachineTransition" id=7]
+
+[sub_resource type="AnimationNodeStateMachineTransition" id=8]
+
+[sub_resource type="AnimationNodeStateMachineTransition" id=9]
+
+[sub_resource type="AnimationNodeStateMachineTransition" id=10]
+
+[sub_resource type="AnimationNodeStateMachine" id=11]
+states/Attack/node = SubResource( 1 )
+states/Attack/position = Vector2( -4, 50 )
+states/Hit/node = SubResource( 2 )
+states/Hit/position = Vector2( 433, 50 )
+states/Idle/node = SubResource( 3 )
+states/Idle/position = Vector2( 237, 50 )
+states/Walk/node = SubResource( 4 )
+states/Walk/position = Vector2( 237, 170 )
+transitions = [ "Idle", "Walk", SubResource( 5 ), "Walk", "Idle", SubResource( 6 ), "Idle", "Attack", SubResource( 7 ), "Attack", "Idle", SubResource( 8 ), "Idle", "Hit", SubResource( 9 ), "Hit", "Idle", SubResource( 10 ) ]
+start_node = "Idle"
+graph_offset = Vector2( -214, -21 )
+
+[sub_resource type="AnimationNodeStateMachinePlayback" id=12]
+
+[node name="Player" instance=ExtResource( 1 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0 )
+
+[node name="Root" parent="." index="0"]
+transform = Transform( 0.00571649, -0.0081174, 0.00119566, -0.000219407, -0.00160795, -0.00986744, 0.00820205, 0.00561448, -0.00109728, 0.0985279, -0.125019, -0.084979 )
+
+[node name="Sword" type="BoneAttachment" parent="Root/Skeleton" index="1"]
+transform = Transform( 0.903704, -0.00430934, -0.428137, 0.0307061, 0.998026, 0.0547675, 0.427056, -0.0626403, 0.902053, -39.5902, 19.1355, -99.7071 )
+bone_name = "hand_r"
+
+[node name="MeshInstance" type="MeshInstance" parent="Root/Skeleton/Sword" index="0"]
+transform = Transform( 0.394704, -0.577019, -0.0354752, 0.558569, 0.391719, -0.156712, 0.149031, 0.0600564, 0.681311, 2.65316, 6.61618, 9.59367 )
+mesh = ExtResource( 2 )
+material/0 = null
+
+[node name="Shield" type="BoneAttachment" parent="Root/Skeleton" index="2"]
+transform = Transform( 0.92693, -0.368753, 0.0694372, 0.362317, 0.927699, 0.0900044, -0.0976063, -0.0582695, 0.993517, 30.0533, 32.1304, -111.426 )
+bone_name = "hand_l"
+
+[node name="MeshInstance" type="MeshInstance" parent="Root/Skeleton/Shield" index="0"]
+transform = Transform( 0.0160459, 0.999826, 0.00959978, -0.999849, 0.015981, 0.00691482, 0.00676005, -0.00970923, 0.99993, 8.1018, -2.85318, 50.532 )
+mesh = ExtResource( 3 )
+material/0 = null
+
+[node name="AnimationTree" type="AnimationTree" parent="." index="2"]
+tree_root = SubResource( 11 )
+anim_player = NodePath("../AnimationPlayer")
+active = true
+parameters/playback = SubResource( 12 )
+
+[connection signal="tree_entered" from="." to="AnimationTree" method="set_active" binds= [ true ]]

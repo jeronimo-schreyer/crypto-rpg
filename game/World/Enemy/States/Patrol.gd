@@ -9,7 +9,6 @@ func _ready():
 
 func enter():
 	patrol_points = character.patrol_circuit.get_baked_points()
-	Global.draw_floor_debug_line(patrol_points)
 
 func exit():
 	pass
@@ -25,7 +24,7 @@ func process(_delta):
 	if character.global_transform.origin.distance_to(patrol_points[patrol_index]) < 1.0:
 		patrol_index = (patrol_index + 1) % patrol_points.size()
 	
-	# Check if enemy is facing player
+	# Check if enemy is facing player and if it's inside the view distance
 	var direction_to_player = character.transform.origin.direction_to(Global.player.transform.origin)
 	if  direction_to_player.dot(character.transform.basis.z) < -0.5 \
 	and character.global_transform.origin.distance_to(Global.player.transform.origin) < character.max_view_distance:

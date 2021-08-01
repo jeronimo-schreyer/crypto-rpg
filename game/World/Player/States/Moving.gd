@@ -6,6 +6,7 @@ func _ready():
 	pass
 
 func enter():
+	character.animation.travel("Walk")
 	if character.target:
 		$Timer.start()
 
@@ -27,5 +28,8 @@ func process(_delta):
 		switch_state("Idle")
 
 func _on_timeout():
-	character.path_index = 0
-	character.path_to_target = Global.get_floor_path(character.transform.origin, character.target.transform.origin)
+	if character.target:
+		character.path_index = 0
+		character.path_to_target = Global.get_floor_path(character.transform.origin, character.target.transform.origin)
+	else:
+		$Timer.stop()

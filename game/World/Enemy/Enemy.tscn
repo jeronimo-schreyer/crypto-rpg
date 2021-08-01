@@ -19,7 +19,8 @@ top_radius = 0.01
 
 [node name="Enemy" type="KinematicBody"]
 script = ExtResource( 1 )
-speed = 5.0
+speed = 2.0
+max_view_distance = 10.0
 
 [node name="MeshInstance" type="MeshInstance" parent="."]
 transform = Transform( 1, 0, 0, 0, -1.62921e-07, -1, 0, 1, -1.62921e-07, 0, 1.5, 0 )
@@ -61,7 +62,7 @@ one_shot = true
 script = ExtResource( 6 )
 
 [node name="Timer" type="Timer" parent="States/Attack"]
-wait_time = 0.5
+wait_time = 2.2
 
 [connection signal="timeout" from="States/Follow/Timer" to="States/Follow" method="_on_timeout"]
 [connection signal="timeout" from="States/Idle/Timer" to="States/Idle" method="_on_timeout"]

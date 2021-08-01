@@ -6,4 +6,4 @@ func _ready():
 	pass # Replace with function body.
 
 func enter():
-	pass
+	character.animation.travel("Idle")

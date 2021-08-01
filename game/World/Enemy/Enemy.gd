@@ -16,4 +16,4 @@ func get_class():
 func on_hitted(character, damage):
 	if character == self:
 		print("Has golpeado a %s y le quitaste %d vida" % [name, damage])
-		$States.switch_state("Follow")
+		$States.switch_state("Attack")

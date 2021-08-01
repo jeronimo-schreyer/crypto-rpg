@@ -17,7 +17,6 @@ _data = {
 [node name="CameraRig" parent="." instance=ExtResource( 2 )]
 
 [node name="Player" parent="." instance=ExtResource( 1 )]
-speed = 20.0
 
 [node name="Floor" parent="." instance=ExtResource( 3 )]
 
@@ -27,7 +26,6 @@ transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 15.9791, 0, 17.0578 )
 [node name="Enemigo" parent="." instance=ExtResource( 5 )]
 transform = Transform( -4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -14.6879, 0, 19.9913 )
 patrol_circuit = SubResource( 1 )
-max_view_distance = 30.0
 
 [node name="DirectionalLight" type="DirectionalLight" parent="."]
 transform = Transform( 1, 0, 0, 0, -0.71934, 0.694658, 0, -0.694658, -0.71934, 0, 10, 0 )
