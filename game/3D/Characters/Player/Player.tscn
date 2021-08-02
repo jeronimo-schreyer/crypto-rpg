@@ -47,10 +47,10 @@ graph_offset = Vector2( -214, -21 )
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0 )
 
 [node name="Root" parent="." index="0"]
-transform = Transform( 0.00571649, -0.0081174, 0.00119566, -0.000219407, -0.00160795, -0.00986744, 0.00820205, 0.00561448, -0.00109728, 0.0985279, -0.125019, -0.084979 )
+transform = Transform( 0.00578382, -0.00807119, 0.0011846, -0.000198039, -0.00159063, -0.0098707, 0.00815526, 0.00568557, -0.00107983, 0.0959238, -0.126943, -0.0864049 )
 
 [node name="Sword" type="BoneAttachment" parent="Root/Skeleton" index="1"]
-transform = Transform( 0.903704, -0.00430934, -0.428137, 0.0307061, 0.998026, 0.0547675, 0.427056, -0.0626403, 0.902053, -39.5902, 19.1355, -99.7071 )
+transform = Transform( 0.933783, 0.0186464, -0.357353, -0.00255828, 0.998963, 0.0454399, 0.35783, -0.041517, 0.932863, -38.8392, 20.1138, -98.867 )
 bone_name = "hand_r"
 
 [node name="MeshInstance" type="MeshInstance" parent="Root/Skeleton/Sword" index="0"]
@@ -59,7 +59,7 @@ mesh = ExtResource( 2 )
 material/0 = null
 
 [node name="Shield" type="BoneAttachment" parent="Root/Skeleton" index="2"]
-transform = Transform( 0.92693, -0.368753, 0.0694372, 0.362317, 0.927699, 0.0900044, -0.0976063, -0.0582695, 0.993517, 30.0533, 32.1304, -111.426 )
+transform = Transform( 0.923111, -0.376658, 0.0774171, 0.363767, 0.920645, 0.141724, -0.124655, -0.102665, 0.986874, 29.9435, 32.9294, -112.772 )
 bone_name = "hand_l"
 
 [node name="MeshInstance" type="MeshInstance" parent="Root/Skeleton/Shield" index="0"]
