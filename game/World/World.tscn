@@ -1,16 +1,8 @@
-[gd_scene load_steps=7 format=2]
+[gd_scene load_steps=4 format=2]
 
 [ext_resource path="res://World/Player/Player.tscn" type="PackedScene" id=1]
 [ext_resource path="res://World/Camera/Camera.tscn" type="PackedScene" id=2]
 [ext_resource path="res://World/Floor/Floor.tscn" type="PackedScene" id=3]
-[ext_resource path="res://World/NPC/NPC.tscn" type="PackedScene" id=4]
-[ext_resource path="res://World/Enemy/Enemy.tscn" type="PackedScene" id=5]
-
-[sub_resource type="Curve3D" id=1]
-_data = {
-"points": PoolVector3Array( 0, 0, 0, 0, 0, 0, -14.1785, 0, 45.8506, 0, 0, 0, 0, 0, 0, -45.0752, 0, 46.343, 0, 0, 0, 0, 0, 0, -45.3214, 0, 22.7089, 0, 0, 0, 0, 0, 0, -14.9171, 0, 23.5706, 0, 0, 0, 0, 0, 0, -14.1785, 0, 45.8506 ),
-"tilts": PoolRealArray( 0, 0, 0, 0, 0 )
-}
 
 [node name="World" type="Spatial"]
 
@@ -20,16 +12,6 @@ _data = {
 
 [node name="Floor" parent="." instance=ExtResource( 3 )]
 
-[node name="NPC" parent="Floor/NavigationMeshInstance" index="2" instance=ExtResource( 4 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 15.9791, 0, 17.0578 )
-
-[node name="Enemigo" parent="." instance=ExtResource( 5 )]
-transform = Transform( -4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -14.6879, 0, 19.9913 )
-patrol_circuit = SubResource( 1 )
-max_view_distance = 20.0
-
 [node name="DirectionalLight" type="DirectionalLight" parent="."]
 transform = Transform( 1, 0, 0, 0, -0.71934, 0.694658, 0, -0.694658, -0.71934, 0, 10, 0 )
 shadow_enabled = true
-
-[editable path="Floor"]
