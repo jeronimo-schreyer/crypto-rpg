@@ -72,41 +72,14 @@ window/size/height=720
 window/size/test_width=1024
 window/size/test_height=768
 
-[items]
+[input_devices]
 
-potions/list=[ {
-"effects": [ {
-"stat": "hp",
-"value": 30.0
-} ],
-"id": "a86248b8",
-"image": "res://UI/Potions/16.png",
-"name": "Red Potion"
-}, {
-"effects": [ {
-"stat": "mp",
-"value": 30.0
-} ],
-"id": "a8624b6a",
-"image": "res://UI/Potions/5.png",
-"name": "Blue Potion"
-}, {
-"effects": [ {
-"stat": "hp",
-"value": 30.0
-}, {
-"stat": "mp",
-"value": 30.0
-} ],
-"id": "a8624f48",
-"image": "res://UI/Potions/26.png",
-"name": "Yellow Potion"
-} ]
+pointing/emulate_touch_from_mouse=true
 
 [rendering]
 
-threads/thread_model=2
-quality/filters/msaa=1
-quality/filters/use_fxaa=true
-quality/filters/use_debanding=true
+quality/driver/driver_name="GLES2"
+quality/intended_usage/framebuffer_allocation.mobile=2
+vram_compression/import_etc=true
+vram_compression/import_pvrtc=true
 environment/default_environment="res://default_env.tres"
