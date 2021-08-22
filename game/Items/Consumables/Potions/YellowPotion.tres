@@ -1,0 +1,13 @@
+[gd_resource type="Resource" load_steps=2 format=2]
+
+[ext_resource path="res://Items/Consumables/ConsumableItem.gd" type="Script" id=1]
+
+[resource]
+resource_name = "Yellow Potion"
+script = ExtResource( 1 )
+uuid = "a8624f48"
+image = "res://UI/Potions/26.png"
+effects = {
+"hp": 30,
+"mp": 30
+}

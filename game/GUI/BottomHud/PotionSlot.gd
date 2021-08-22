@@ -9,7 +9,7 @@ func _ready():
 func set_item(_id):
 	if Global.items.has(_id):
 		id = _id
-		$Content/TextureRect.texture = Global.items[_id].image
+		$Content/TextureRect.texture = Global.items[_id].texture
 	else:
 		clear()
 
@@ -21,11 +21,11 @@ func _on_mouse_entered():
 	if !id.empty():
 		var effects = ""
 		for e in Global.items[id].effects:
-			effects += "%s: %+d\n" % [e.stat, e.value]
+			effects += "%s: %+d\n" % [e, Global.items[id].effects[e]]
 		
 		Events.emit_signal("info", """%s
 		%s""" % [
-			Global.items[id].name,
+			Global.items[id].resource_name,
 			effects.strip_edges()
 		])
 
@@ -36,6 +36,6 @@ func _on_mouse_exited():
 func _on_pressed():
 	if !id.empty():
 		for effect in Global.items[id].effects:
-			Events.emit_signal("player_stat", effect.stat, effect.value)
+			Events.emit_signal("player_stat", effect, Global.items[id].effects[effect])
 		clear()
 		Events.emit_signal("info", "")
