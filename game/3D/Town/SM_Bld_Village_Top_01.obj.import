@@ -1,0 +1,19 @@
+[remap]
+
+importer="wavefront_obj"
+type="Mesh"
+path="res://.import/SM_Bld_Village_Top_01.obj-1e5aeb8b4526da30e48b55a8cb692f6c.mesh"
+
+[deps]
+
+files=[ "res://.import/SM_Bld_Village_Top_01.obj-1e5aeb8b4526da30e48b55a8cb692f6c.mesh" ]
+
+source_file="res://3D/Town/SM_Bld_Village_Top_01.obj"
+dest_files=[ "res://.import/SM_Bld_Village_Top_01.obj-1e5aeb8b4526da30e48b55a8cb692f6c.mesh", "res://.import/SM_Bld_Village_Top_01.obj-1e5aeb8b4526da30e48b55a8cb692f6c.mesh" ]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3( 1, 1, 1 )
+offset_mesh=Vector3( 0, 0, 0 )
+optimize_mesh=true

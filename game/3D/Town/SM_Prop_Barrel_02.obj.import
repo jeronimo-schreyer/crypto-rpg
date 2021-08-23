@@ -1,0 +1,19 @@
+[remap]
+
+importer="wavefront_obj"
+type="Mesh"
+path="res://.import/SM_Prop_Barrel_02.obj-1e785680140bdacda63b7792731166ed.mesh"
+
+[deps]
+
+files=[ "res://.import/SM_Prop_Barrel_02.obj-1e785680140bdacda63b7792731166ed.mesh" ]
+
+source_file="res://3D/Town/SM_Prop_Barrel_02.obj"
+dest_files=[ "res://.import/SM_Prop_Barrel_02.obj-1e785680140bdacda63b7792731166ed.mesh", "res://.import/SM_Prop_Barrel_02.obj-1e785680140bdacda63b7792731166ed.mesh" ]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3( 1, 1, 1 )
+offset_mesh=Vector3( 0, 0, 0 )
+optimize_mesh=true

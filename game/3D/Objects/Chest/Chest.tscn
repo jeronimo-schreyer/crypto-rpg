@@ -1,0 +1,26 @@
+[gd_scene load_steps=6 format=2]
+
+[ext_resource path="res://3D/Town/SM_Prop_Chest_01.obj" type="ArrayMesh" id=1]
+[ext_resource path="res://3D/Town/town.material" type="Material" id=2]
+[ext_resource path="res://3D/Town/SM_Prop_Chest_Lid_01.obj" type="ArrayMesh" id=3]
+[ext_resource path="res://3D/Objects/Chest/Close.anim" type="Animation" id=4]
+[ext_resource path="res://3D/Objects/Chest/Open.anim" type="Animation" id=5]
+
+[node name="Chest" type="Spatial"]
+
+[node name="SM_Prop_Chest_01" type="MeshInstance" parent="."]
+transform = Transform( 0.01, 0, 0, 0, 0.01, 0, 0, 0, 0.01, 0, 0, 0 )
+mesh = ExtResource( 1 )
+material/0 = ExtResource( 2 )
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+anims/close = ExtResource( 4 )
+anims/open = ExtResource( 5 )
+
+[node name="Lid" type="Spatial" parent="."]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.379, -0.317 )
+
+[node name="SM_Prop_Chest_Lid_01" type="MeshInstance" parent="Lid"]
+transform = Transform( 0.01, 0, 0, 0, 0.01, 0, 0, 0, 0.01, 0, -0.379, 0.317 )
+mesh = ExtResource( 3 )
+material/0 = ExtResource( 2 )

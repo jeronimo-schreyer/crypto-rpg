@@ -1,0 +1,19 @@
+[remap]
+
+importer="wavefront_obj"
+type="Mesh"
+path="res://.import/SM_Item_Potion_06.obj-c6dc9d23cb01a4ce1ce193da8ca39fc0.mesh"
+
+[deps]
+
+files=[ "res://.import/SM_Item_Potion_06.obj-c6dc9d23cb01a4ce1ce193da8ca39fc0.mesh" ]
+
+source_file="res://3D/Town/SM_Item_Potion_06.obj"
+dest_files=[ "res://.import/SM_Item_Potion_06.obj-c6dc9d23cb01a4ce1ce193da8ca39fc0.mesh", "res://.import/SM_Item_Potion_06.obj-c6dc9d23cb01a4ce1ce193da8ca39fc0.mesh" ]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3( 1, 1, 1 )
+offset_mesh=Vector3( 0, 0, 0 )
+optimize_mesh=true

@@ -2,48 +2,18 @@
 
 [ext_resource path="res://World/Player/Player.tscn" type="PackedScene" id=1]
 [ext_resource path="res://World/Camera/Camera.tscn" type="PackedScene" id=2]
-[ext_resource path="res://World/Floor/Floor.tscn" type="PackedScene" id=3]
+[ext_resource path="res://3D/Town/Town.tscn" type="PackedScene" id=3]
 [ext_resource path="res://World/NPC/NPC.tscn" type="PackedScene" id=4]
 
 [node name="World" type="Spatial"]
 
 [node name="CameraRig" parent="." instance=ExtResource( 2 )]
+visible = false
 
 [node name="NPC" parent="." instance=ExtResource( 4 )]
-transform = Transform( -0.0980264, 0, -1.49679, 0, 1.5, 0, 1.49679, 0, -0.0980264, 20.3632, 0, -3.7746 )
+transform = Transform( -0.0653511, 0, -0.997862, 0, 1, 0, 0.997862, 0, -0.0653511, 11.6006, 0, -18.844 )
 
 [node name="Player" parent="." instance=ExtResource( 1 )]
-transform = Transform( 1.5, 0, 0, 0, 1.5, 0, 0, 0, 1.5, 0, 0, 0 )
+transform = Transform( 1.1, 0, 0, 0, 1.1, 0, 0, 0, 1.1, 0, 0, 0 )
 
-[node name="Floor" parent="." instance=ExtResource( 3 )]
-
-[node name="Street" parent="Floor" index="0"]
-data = {
-"cells": PoolIntArray( 2031644, 1, 1441805, 2097145, 65516, -2147483643, 2097145, 65528, 14 )
-}
-
-[node name="Buildings" parent="Floor/NavigationMeshInstance" index="0"]
-data = {
-"cells": PoolIntArray( 14, 1, 1441844, 7, 6, 655465, 2, 7, 537526322, 65529, 13, 316, 65527, 15, -1609170627, 65531, 15, 1048893, 65534, 16, 1442109, 65527, 17, 1048893, 65532, 17, 655678, 4, 19, 318, 2, 20, 1442109, 65528, 20, 1442109, 7, 21, 655677, 0, 22, 1442109, 4, 22, 655677, 65530, 22, 655676, 65533, 22, 536871229, 3, 65531, 536870980, 65531, 65531, 68, 10, 65533, 64 )
-}
-
-[node name="Floor" parent="Floor/NavigationMeshInstance" index="1"]
-data = {
-"cells": PoolIntArray( 65536, 0, 537526381, 65539, 0, 655469, 65542, 0, 655469, 65536, 3, 655469, 65539, 3, 537526381, 65542, 3, 655469, 131069, 7, 109, 131071, 7, 536871021, 65536, 65533, 537526381, 65539, 65533, 537526381, 65542, 65533, 655469 )
-}
-
-[node name="Props" parent="Floor/NavigationMeshInstance" index="2"]
-data = {
-"cells": PoolIntArray( 65580, 15, 538312798, 131091, 25, 1245268, 131094, 25, 1245268, 65577, 30, 125, 65538, 31, 1441885, 65576, 49, 655639, 65575, 51, 1442069, 65588, 51, 655481, 65576, 52, 1441965, 65575, 53, 655637, 65576, 55, 279, 131050, 65524, 1441884, 65560, 65528, 1441832 )
-}
-
-[node name="Walls" parent="Floor/NavigationMeshInstance" index="3"]
-data = {
-"cells": PoolIntArray( 23, 65520, 1073741905, 41, 65520, 81, 53, 65520, 81, 65512, 65520, 33, 65518, 65520, 33 )
-}
-
-[node name="DirectionalLight" type="DirectionalLight" parent="."]
-transform = Transform( 1, 0, 0, 0, -0.71934, 0.694658, 0, -0.694658, -0.71934, 0, 10, 0 )
-shadow_enabled = true
-
-[editable path="Floor"]
+[node name="Spatial" parent="." instance=ExtResource( 3 )]

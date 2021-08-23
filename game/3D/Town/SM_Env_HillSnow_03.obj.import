@@ -1,0 +1,19 @@
+[remap]
+
+importer="wavefront_obj"
+type="Mesh"
+path="res://.import/SM_Env_HillSnow_03.obj-ea18d7fa19ca5322c412e7f2d43ea354.mesh"
+
+[deps]
+
+files=[ "res://.import/SM_Env_HillSnow_03.obj-ea18d7fa19ca5322c412e7f2d43ea354.mesh" ]
+
+source_file="res://3D/Town/SM_Env_HillSnow_03.obj"
+dest_files=[ "res://.import/SM_Env_HillSnow_03.obj-ea18d7fa19ca5322c412e7f2d43ea354.mesh", "res://.import/SM_Env_HillSnow_03.obj-ea18d7fa19ca5322c412e7f2d43ea354.mesh" ]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3( 1, 1, 1 )
+offset_mesh=Vector3( 0, 0, 0 )
+optimize_mesh=true

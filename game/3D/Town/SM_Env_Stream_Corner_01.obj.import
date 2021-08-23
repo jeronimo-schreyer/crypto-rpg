@@ -1,0 +1,19 @@
+[remap]
+
+importer="wavefront_obj"
+type="Mesh"
+path="res://.import/SM_Env_Stream_Corner_01.obj-b992917c9b47c2e38188115771c0caed.mesh"
+
+[deps]
+
+files=[ "res://.import/SM_Env_Stream_Corner_01.obj-b992917c9b47c2e38188115771c0caed.mesh" ]
+
+source_file="res://3D/Town/SM_Env_Stream_Corner_01.obj"
+dest_files=[ "res://.import/SM_Env_Stream_Corner_01.obj-b992917c9b47c2e38188115771c0caed.mesh", "res://.import/SM_Env_Stream_Corner_01.obj-b992917c9b47c2e38188115771c0caed.mesh" ]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3( 1, 1, 1 )
+offset_mesh=Vector3( 0, 0, 0 )
+optimize_mesh=true

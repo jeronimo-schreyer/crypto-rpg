@@ -1,0 +1,19 @@
+[remap]
+
+importer="wavefront_obj"
+type="Mesh"
+path="res://.import/SM_Env_TreePine_03.obj-3d5ccaac15bc6abc55463db9d43bb4ea.mesh"
+
+[deps]
+
+files=[ "res://.import/SM_Env_TreePine_03.obj-3d5ccaac15bc6abc55463db9d43bb4ea.mesh" ]
+
+source_file="res://3D/Town/SM_Env_TreePine_03.obj"
+dest_files=[ "res://.import/SM_Env_TreePine_03.obj-3d5ccaac15bc6abc55463db9d43bb4ea.mesh", "res://.import/SM_Env_TreePine_03.obj-3d5ccaac15bc6abc55463db9d43bb4ea.mesh" ]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3( 1, 1, 1 )
+offset_mesh=Vector3( 0, 0, 0 )
+optimize_mesh=true

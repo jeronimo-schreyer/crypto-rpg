@@ -1,0 +1,19 @@
+[remap]
+
+importer="wavefront_obj"
+type="Mesh"
+path="res://.import/SM_Env_Hill_02.obj-43ce216b319689139677fb7e73c57216.mesh"
+
+[deps]
+
+files=[ "res://.import/SM_Env_Hill_02.obj-43ce216b319689139677fb7e73c57216.mesh" ]
+
+source_file="res://3D/Town/SM_Env_Hill_02.obj"
+dest_files=[ "res://.import/SM_Env_Hill_02.obj-43ce216b319689139677fb7e73c57216.mesh", "res://.import/SM_Env_Hill_02.obj-43ce216b319689139677fb7e73c57216.mesh" ]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3( 1, 1, 1 )
+offset_mesh=Vector3( 0, 0, 0 )
+optimize_mesh=true

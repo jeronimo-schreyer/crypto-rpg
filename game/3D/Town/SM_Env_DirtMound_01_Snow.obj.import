@@ -1,0 +1,19 @@
+[remap]
+
+importer="wavefront_obj"
+type="Mesh"
+path="res://.import/SM_Env_DirtMound_01_Snow.obj-596a684d5e29e1c848af322a4bd89e42.mesh"
+
+[deps]
+
+files=[ "res://.import/SM_Env_DirtMound_01_Snow.obj-596a684d5e29e1c848af322a4bd89e42.mesh" ]
+
+source_file="res://3D/Town/SM_Env_DirtMound_01_Snow.obj"
+dest_files=[ "res://.import/SM_Env_DirtMound_01_Snow.obj-596a684d5e29e1c848af322a4bd89e42.mesh", "res://.import/SM_Env_DirtMound_01_Snow.obj-596a684d5e29e1c848af322a4bd89e42.mesh" ]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3( 1, 1, 1 )
+offset_mesh=Vector3( 0, 0, 0 )
+optimize_mesh=true

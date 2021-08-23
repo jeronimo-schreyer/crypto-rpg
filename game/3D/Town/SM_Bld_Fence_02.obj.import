@@ -1,0 +1,19 @@
+[remap]
+
+importer="wavefront_obj"
+type="Mesh"
+path="res://.import/SM_Bld_Fence_02.obj-59a37548ac3e38a56cb23c8319d5befd.mesh"
+
+[deps]
+
+files=[ "res://.import/SM_Bld_Fence_02.obj-59a37548ac3e38a56cb23c8319d5befd.mesh" ]
+
+source_file="res://3D/Town/SM_Bld_Fence_02.obj"
+dest_files=[ "res://.import/SM_Bld_Fence_02.obj-59a37548ac3e38a56cb23c8319d5befd.mesh", "res://.import/SM_Bld_Fence_02.obj-59a37548ac3e38a56cb23c8319d5befd.mesh" ]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3( 1, 1, 1 )
+offset_mesh=Vector3( 0, 0, 0 )
+optimize_mesh=true
