@@ -217,7 +217,6 @@ valign = 1
 __meta__ = {
 "_edit_use_anchors_": true
 }
-
 [connection signal="mouse_entered" from="Panel/Life" to="." method="_on_Life_mouse_entered"]
 [connection signal="mouse_exited" from="Panel/Life" to="." method="_on_button_mouse_exited"]
 [connection signal="mouse_entered" from="Panel/Magic" to="." method="_on_Magic_mouse_entered"]

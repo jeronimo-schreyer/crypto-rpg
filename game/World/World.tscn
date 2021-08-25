@@ -16,4 +16,4 @@ transform = Transform( -0.0653511, 0, -0.997862, 0, 1, 0, 0.997862, 0, -0.065351
 [node name="Player" parent="." instance=ExtResource( 1 )]
 transform = Transform( 1.1, 0, 0, 0, 1.1, 0, 0, 0, 1.1, 0, 0, 0 )
 
-[node name="Spatial" parent="." instance=ExtResource( 3 )]
+[node name="Town" parent="." instance=ExtResource( 3 )]

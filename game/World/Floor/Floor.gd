@@ -22,11 +22,7 @@ func get_nav_path(origin, destination):
 func draw_debug_line(path):
 	if OS.is_debug_build() and path.size() > 0:
 		$DebugPath.clear()
-		$DebugPath.begin(Mesh.PRIMITIVE_POINTS, null)
-		$DebugPath.add_vertex(path[0])
-		$DebugPath.add_vertex(path[path.size() - 1])
-		$DebugPath.end()
-		$DebugPath.begin(Mesh.PRIMITIVE_LINE_STRIP, null)
+		$DebugPath.begin(Mesh.PRIMITIVE_LINE_STRIP)
 		for x in path:
-			$DebugPath.add_vertex(x)
+			$DebugPath.add_vertex(to_global(x))
 		$DebugPath.end()

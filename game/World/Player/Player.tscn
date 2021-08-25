@@ -9,6 +9,7 @@
 [ext_resource path="res://3D/Characters/Player/Player.tscn" type="PackedScene" id=7]
 
 [sub_resource type="CylinderShape" id=1]
+margin = 0.001
 radius = 1.2
 height = 3.0
 
@@ -53,7 +54,6 @@ wait_time = 0.5
 
 [node name="Talking" type="Node" parent="States"]
 script = ExtResource( 6 )
-
 [connection signal="body_entered" from="Area" to="." method="_on_body_entered"]
 [connection signal="body_exited" from="Area" to="." method="_on_body_exited"]
 [connection signal="timeout" from="States/Attack/Timer" to="States/Attack" method="_on_timeout"]
