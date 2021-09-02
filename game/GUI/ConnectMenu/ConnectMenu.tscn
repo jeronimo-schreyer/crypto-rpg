@@ -1,0 +1,172 @@
+[gd_scene load_steps=14 format=2]
+
+[ext_resource path="res://Fonts/RobotoSlab-Bold.ttf" type="DynamicFontData" id=1]
+[ext_resource path="res://Fonts/RobotoSlab-Regular.ttf" type="DynamicFontData" id=2]
+[ext_resource path="res://Fonts/Roboto-BoldItalic.ttf" type="DynamicFontData" id=3]
+[ext_resource path="res://GUI/ConnectMenu/ConnectMenu.gd" type="Script" id=4]
+
+[sub_resource type="DynamicFont" id=1]
+size = 64
+use_filter = true
+font_data = ExtResource( 1 )
+
+[sub_resource type="DynamicFont" id=2]
+use_filter = true
+font_data = ExtResource( 3 )
+
+[sub_resource type="StyleBoxFlat" id=3]
+bg_color = Color( 0, 0, 0, 1 )
+border_width_bottom = 6
+border_color = Color( 1, 1, 1, 1 )
+border_blend = true
+corner_radius_bottom_right = 5
+corner_radius_bottom_left = 5
+
+[sub_resource type="DynamicFont" id=4]
+size = 32
+use_filter = true
+font_data = ExtResource( 2 )
+
+[sub_resource type="StyleBoxFlat" id=5]
+bg_color = Color( 0.2, 0.2, 0.2, 1 )
+border_width_left = 3
+border_width_top = 3
+border_width_right = 3
+border_width_bottom = 3
+corner_radius_top_left = 5
+corner_radius_top_right = 5
+corner_radius_bottom_right = 5
+corner_radius_bottom_left = 5
+
+[sub_resource type="StyleBoxFlat" id=6]
+bg_color = Color( 0.12, 0.12, 0.12, 1 )
+border_width_left = 3
+border_width_top = 3
+border_width_right = 3
+border_width_bottom = 3
+corner_radius_top_left = 5
+corner_radius_top_right = 5
+corner_radius_bottom_right = 5
+corner_radius_bottom_left = 5
+
+[sub_resource type="StyleBoxFlat" id=7]
+bg_color = Color( 0.7, 0.7, 0.7, 1 )
+border_width_left = 3
+border_width_top = 3
+border_width_right = 3
+border_width_bottom = 3
+corner_radius_top_left = 5
+corner_radius_top_right = 5
+corner_radius_bottom_right = 5
+corner_radius_bottom_left = 5
+
+[sub_resource type="StyleBoxFlat" id=8]
+bg_color = Color( 0, 0, 0, 1 )
+border_width_left = 3
+border_width_top = 3
+border_width_right = 3
+border_width_bottom = 3
+corner_radius_top_left = 5
+corner_radius_top_right = 5
+corner_radius_bottom_right = 5
+corner_radius_bottom_left = 5
+
+[sub_resource type="DynamicFont" id=9]
+size = 32
+outline_size = 1
+outline_color = Color( 0, 0, 0, 1 )
+use_filter = true
+font_data = ExtResource( 2 )
+
+[node name="Connect" type="Control"]
+pause_mode = 2
+anchor_right = 1.0
+anchor_bottom = 1.0
+script = ExtResource( 4 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Overlay" type="ColorRect" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+color = Color( 0, 0, 0, 0.9 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Title" type="Label" parent="."]
+anchor_top = 0.0916667
+anchor_right = 1.0
+anchor_bottom = 0.211111
+custom_fonts/font = SubResource( 1 )
+text = "crypto rpg"
+align = 1
+uppercase = true
+__meta__ = {
+"_edit_use_anchors_": true
+}
+
+[node name="Status" type="Label" parent="."]
+anchor_left = 0.0625
+anchor_top = 0.273611
+anchor_right = 0.9375
+anchor_bottom = 0.393056
+margin_bottom = -3.05176e-05
+custom_fonts/font = SubResource( 2 )
+custom_colors/font_color = Color( 0.6, 0.6, 0.6, 1 )
+align = 1
+valign = 1
+uppercase = true
+__meta__ = {
+"_edit_use_anchors_": true
+}
+
+[node name="Address" type="LineEdit" parent="."]
+anchor_left = 0.1875
+anchor_top = 0.458333
+anchor_right = 0.8125
+anchor_bottom = 0.541667
+focus_mode = 1
+custom_styles/read_only = SubResource( 3 )
+custom_styles/focus = SubResource( 3 )
+custom_styles/normal = SubResource( 3 )
+custom_fonts/font = SubResource( 4 )
+align = 1
+placeholder_text = "address"
+__meta__ = {
+"_edit_use_anchors_": true
+}
+
+[node name="Name" type="LineEdit" parent="."]
+anchor_left = 0.1875
+anchor_top = 0.633333
+anchor_right = 0.8125
+anchor_bottom = 0.716667
+focus_mode = 1
+custom_styles/read_only = SubResource( 3 )
+custom_styles/focus = SubResource( 3 )
+custom_styles/normal = SubResource( 3 )
+custom_fonts/font = SubResource( 4 )
+align = 1
+placeholder_text = "display name"
+__meta__ = {
+"_edit_use_anchors_": true
+}
+
+[node name="Enter" type="Button" parent="."]
+anchor_left = 0.40625
+anchor_top = 0.791667
+anchor_right = 0.59375
+anchor_bottom = 0.958333
+custom_styles/hover = SubResource( 5 )
+custom_styles/pressed = SubResource( 6 )
+custom_styles/disabled = SubResource( 7 )
+custom_styles/normal = SubResource( 8 )
+custom_fonts/font = SubResource( 9 )
+text = "ENTER"
+__meta__ = {
+"_edit_use_anchors_": true
+}
+[connection signal="tree_entered" from="." to="." method="_on_tree_entered"]
+[connection signal="pressed" from="Enter" to="." method="_on_Enter_pressed"]

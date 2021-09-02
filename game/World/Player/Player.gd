@@ -20,6 +20,9 @@ func _ready():
 	# warning-ignore: return_value_discarded
 	Events.connect("hit", self, "on_hitted")
 
+func _process(_delta):
+	rpc("update_transform", transform)
+
 func on_hitted(character, _damage):
 	if character == self:
 		animation.start("Hit")

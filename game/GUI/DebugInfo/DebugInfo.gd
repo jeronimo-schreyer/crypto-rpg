@@ -5,6 +5,7 @@ const B_TO_MB = pow(1024, 2)
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	visible = OS.is_debug_build()
+	set_physics_process(OS.is_debug_build())
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _physics_process(_delta):

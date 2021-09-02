@@ -24,3 +24,11 @@ signal info(enemy, damage)
 signal open_shop(npc)
 # warning-ignore: unused_signal
 signal close_shop()
+
+
+## Network
+
+# warning-ignore: unused_signal
+signal peer_connected(id)
+# warning-ignore: unused_signal
+signal peer_disconnected(id)

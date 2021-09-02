@@ -5,6 +5,8 @@ var floor_instance : Floor
 
 onready var items : Dictionary
 
+var network : Node setget , get_network
+
 func _init():
 	for i in get_files_recursively("res://Items", "tres"):
 		var item = load(i) as ConsumableItem
@@ -35,3 +37,9 @@ func get_files_recursively(path : String, type = []) -> PoolStringArray:
 	
 	dir.list_dir_end()
 	return files
+
+func get_network() -> Node:
+	# this node should be added by Client.gd or Server.gd
+	if has_node("Network"):
+		return get_node("Network")
+	return null
