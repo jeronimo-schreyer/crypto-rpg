@@ -71,6 +71,7 @@ config/icon="res://icon.png"
 Events="*res://Core/Events.gd"
 Global="*res://Core/Global.gd"
 NodePathReflection="*res://Core/node_path_reflection.gd"
+SceneManager="*res://Core/SceneManager.gd"
 
 [display]
 

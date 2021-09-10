@@ -1,7 +1,6 @@
-[gd_scene load_steps=6 format=2]
+[gd_scene load_steps=5 format=2]
 
 [ext_resource path="res://GUI/Shop/ShopGUI.tscn" type="PackedScene" id=1]
-[ext_resource path="res://World/World.tscn" type="PackedScene" id=2]
 [ext_resource path="res://GUI/DebugInfo/DebugInfo.tscn" type="PackedScene" id=3]
 [ext_resource path="res://GUI/BottomHud/BottomHUD.tscn" type="PackedScene" id=4]
 [ext_resource path="res://GUI/ConnectMenu/ConnectMenu.tscn" type="PackedScene" id=5]
@@ -17,7 +16,3 @@
 [node name="BottomHUD" parent="GUI" instance=ExtResource( 4 )]
 
 [node name="Connect" parent="GUI" instance=ExtResource( 5 )]
-
-[node name="World" parent="GUI" instance=ExtResource( 2 )]
-[connection signal="finished" from="GUI/Connect" to="GUI/Connect" method="queue_free"]
-[connection signal="finished" from="GUI/Connect" to="GUI/World" method="setup"]

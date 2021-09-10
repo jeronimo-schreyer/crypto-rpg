@@ -1,10 +1,11 @@
-[gd_scene load_steps=6 format=2]
+[gd_scene load_steps=7 format=2]
 
 [ext_resource path="res://World/Player/Player.tscn" type="PackedScene" id=1]
 [ext_resource path="res://World/Camera/Camera.tscn" type="PackedScene" id=2]
 [ext_resource path="res://3D/Town/Town.tscn" type="PackedScene" id=3]
 [ext_resource path="res://World/NPC/NPC.tscn" type="PackedScene" id=4]
 [ext_resource path="res://World/World.gd" type="Script" id=5]
+[ext_resource path="res://World/MapTeleporter/MapTeleporter.tscn" type="PackedScene" id=6]
 
 [node name="World" type="Spatial"]
 script = ExtResource( 5 )
@@ -19,3 +20,6 @@ transform = Transform( -0.0653511, 0, -0.997862, 0, 1, 0, 0.997862, 0, -0.065351
 transform = Transform( 1.1, 0, 0, 0, 1.1, 0, 0, 0, 1.1, 0, 0, 0 )
 
 [node name="Town" parent="." instance=ExtResource( 3 )]
+
+[node name="MapTeleporter" parent="." instance=ExtResource( 6 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -5.7604, 5, 21 )

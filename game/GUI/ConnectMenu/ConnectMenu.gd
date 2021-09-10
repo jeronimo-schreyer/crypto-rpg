@@ -31,4 +31,7 @@ func _on_tree_entered():
 
 func _on_client_connected():
 	get_tree().paused = false
+	
+	SceneManager.load_scene("res://World/World.tscn")
 	emit_signal("finished")
+	queue_free()

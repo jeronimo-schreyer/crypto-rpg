@@ -8,6 +8,8 @@ func _ready():
 	Events.connect("peer_connected", self, "_on_peer_connected")
 	# warning-ignore: return_value_discarded
 	Events.connect("peer_disconnected", self, "_on_peer_disconnected")
+	
+	setup()
 
 func _on_peer_connected(peer_id):
 	print("peer connected ", peer_id)

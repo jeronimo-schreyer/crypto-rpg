@@ -21,7 +21,7 @@ func _ready():
 	Events.connect("hit", self, "on_hitted")
 
 func _process(_delta):
-	rpc("update_transform", transform)
+	rpc_unreliable("update_transform", transform)
 
 func on_hitted(character, _damage):
 	if character == self:
