@@ -1,3 +1,3 @@
 # Table of contents
 
-* [crypto-rpg](README.md)
+* [👿 crypto-rpg](README.md)
